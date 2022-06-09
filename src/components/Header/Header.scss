@@ -1,0 +1,138 @@
+.header-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+
+    @media(max-width: 650px) {
+        padding-top: 16px;
+        padding-bottom: 0;
+    }
+}
+
+.header-container__row-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container__row-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: 650px) {
+        margin-top: -2px;
+    }
+}
+
+.header__search {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 1px solid #EBEBF1;
+
+    @media(max-width: 650px) {
+        display: none;
+    }
+}
+
+.search-btn {
+    border: none;
+    background-color: transparent;
+
+    & img {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+.search-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+    &::placeholder {
+        color: #BBC4D6;
+    }
+}
+
+.search--mobile {
+    display: none;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    border: none;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: 100vw;
+        background-color: #BBC4D6;
+        height: 1px;
+    }
+
+    @media(max-width: 650px) {
+        display: flex;
+    }
+}
+
+.header__profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #768298;
+    cursor: pointer;
+
+    @media(max-width: 650px) {
+        display: none;
+    }
+
+    & p {
+        margin-right: 10px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: calc(100% + 40px);
+        width: 1px;
+        background-color: #EBEBF1;
+    }
+}
+
+.profile__img {
+    width: 40px;
+    height: 40px;
+}
+
+.header__profile--mobile {
+    display: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    @media(max-width: 650px) {
+        display: block;
+    }
+}
